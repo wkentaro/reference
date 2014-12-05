@@ -1,16 +1,15 @@
 Python examples
 ===
 
-Examples of using libraries
----
-
-* ex-skimage : scikit-image (Image processing.)
-* ex-sklearn : scikit-learn (Machine Learning.)
-* ex-pyqt4   : PyQt4 (Create gui application.)
-* ex-vision  : vispy (Computer graphics.)
-* ex-opencv  : OpenCV (Computer vision.)
-* ex-pyo     : pyo (Audio processing.)
-* ex-julius  : Julius (Use julius to recognize sound NLP.)
+* skimage : scikit-image (Image processing.) 
+  * http://scikit-image.org/docs/0.10.x/
+* sklearn : scikit-learn (Machine Learning.)
+* pyqt4   : PyQt4 (Create gui application.)
+  * http://zetcode.com/gui/pyqt4/
+* vision  : vispy (Computer graphics.)
+* opencv  : OpenCV (Computer vision.)
+* pyo     : pyo (Audio processing.)
+* julius  : Julius (Use julius to recognize sound NLP.)
 
 Others
 ---
