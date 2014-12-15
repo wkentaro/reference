@@ -14,4 +14,4 @@ Python examples
 Others
 ---
 
-* ex-cwrapper : How to do c wrapping of python.(C Wrapping)
+* cwrapper : How to do c wrapping of python.(C Wrapping)
