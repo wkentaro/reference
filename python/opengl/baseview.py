@@ -11,7 +11,7 @@ class BaseView(object):
         self.w=1
         self.h=1
         self.isLeftDown=False
-        self.isMiddelDown=False
+        self.isMiddleDown=False
         self.isRightDown=False
 
     def updateProjection(self):
@@ -34,12 +34,12 @@ class BaseView(object):
         self.isLeftDown=False
 
     def onMiddleDown(self, x, y):
-        self.isMiddelDown=True
+        self.isMiddleDown=True
         self.x=x
         self.y=y
 
     def onMiddleUp(self, x, y):
-        self.isMiddelDown=False
+        self.isMiddleDown=False
 
     def onRightDown(self, x, y):
         self.isRightDown=True
