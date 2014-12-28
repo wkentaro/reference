@@ -3,7 +3,10 @@
 # multiprocessing_queue.py
 # author: Kentaro Wada <www.kentaro.wada@gmail.com>
 
+import math
+import random
 import multiprocessing
+
 
 class MyFancyClass(object):
     def __init__(self, name):
@@ -14,18 +17,21 @@ class MyFancyClass(object):
         print 'Doing something fancy in %s for %s!' % (proc_name, self.name)
 
 
-def worker(q):
+def worker(q, n):
     obj = q.get()
     obj.do_something()
+    print math.factorial(n)
 
 
 if __name__ == '__main__':
     queue = multiprocessing.Queue()
 
-    p = multiprocessing.Process(target=worker, args=(queue,))
-    p.start()
+    for i in range(3):
+        rnd = random.randint(0, 100)
+        p = multiprocessing.Process(target=worker, args=(queue, rnd))
+        p.start()
 
-    queue.put(MyFancyClass('Fancy Dan'))
+        queue.put(MyFancyClass('FancyClass-{0}'.format(i)))
 
     # ワーカーが終了するまで待つ
     queue.close()
