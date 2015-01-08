@@ -1,8 +1,9 @@
+*********************************
 Generate GitHub Pages with Sphinx
-=================================
+*********************************
 
 Generate gh-pages
----
+#################
 First, you should generate gh-pages branch and GitHub pages. ::
 
   cd repo
@@ -14,12 +15,12 @@ First, you should generate gh-pages branch and GitHub pages. ::
   git push origin gh-pages
 
 Run sphinx-quickstart
----
+######################
   git checkout master
   sphinx-quickstart # in second option you should say yes
 
 Add build target
----
+################
 Add below in Makefile. ::
 
   GH_PAGES_SOURCES = source code wiki Makefile
@@ -39,12 +40,12 @@ Add below in Makefile. ::
 
 
 Add documents
----
+#############
 If you add new documents, you can build and publish it by running below.::
 
   vim source/expert_python.rst
   make gh-pages
 
 Reference
----
+#########
 * http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html

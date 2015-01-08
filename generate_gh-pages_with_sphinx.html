@@ -48,9 +48,9 @@
             
   <div class="section" id="generate-github-pages-with-sphinx">
 <h1>Generate GitHub Pages with Sphinx<a class="headerlink" href="#generate-github-pages-with-sphinx" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Generate gh-pages
-&#8212;
-First, you should generate gh-pages branch and GitHub pages.</p>
+<div class="section" id="generate-gh-pages">
+<h2>Generate gh-pages<a class="headerlink" href="#generate-gh-pages" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>First, you should generate gh-pages branch and GitHub pages.</p>
 <div class="highlight-python"><div class="highlight"><pre>cd repo
 git checkout --orphan gh-pages
 git rm -rf .
@@ -60,14 +60,16 @@ git commit -m &quot;Just to create the branch.&quot;
 git push origin gh-pages
 </pre></div>
 </div>
-<p>Run sphinx-quickstart
-&#8212;</p>
+</div>
+<div class="section" id="run-sphinx-quickstart">
+<h2>Run sphinx-quickstart<a class="headerlink" href="#run-sphinx-quickstart" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <blockquote>
 <div>git checkout master
 sphinx-quickstart # in second option you should say yes</div></blockquote>
-<p>Add build target
-&#8212;
-Add below in Makefile.</p>
+</div>
+<div class="section" id="add-build-target">
+<h2>Add build target<a class="headerlink" href="#add-build-target" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Add below in Makefile.</p>
 <div class="highlight-python"><div class="highlight"><pre>GH_PAGES_SOURCES = source code wiki Makefile
 
 ...
@@ -84,16 +86,21 @@ gh-pages:
     git ci -m &quot;Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`&quot; &amp;&amp; git push origin gh-pages ; git checkout master
 </pre></div>
 </div>
-<p>Add documents
-&#8212;
-If you add new documents, you can build and publish it by running below.:</p>
+</div>
+<div class="section" id="add-documents">
+<h2>Add documents<a class="headerlink" href="#add-documents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>If you add new documents, you can build and publish it by running below.:</p>
 <div class="highlight-python"><div class="highlight"><pre>vim source/expert_python.rst
 make gh-pages
 </pre></div>
 </div>
-<p>Reference
-&#8212;
-* <a class="reference external" href="http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html">http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html</a></p>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html">http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html</a></li>
+</ul>
+</div>
 </div>
 
 
@@ -102,6 +109,18 @@ make gh-pages
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Generate GitHub Pages with Sphinx</a><ul>
+<li><a class="reference internal" href="#generate-gh-pages">Generate gh-pages</a></li>
+<li><a class="reference internal" href="#run-sphinx-quickstart">Run sphinx-quickstart</a></li>
+<li><a class="reference internal" href="#add-build-target">Add build target</a></li>
+<li><a class="reference internal" href="#add-documents">Add documents</a></li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>前のトピックへ</h4>
   <p class="topless"><a href="expert_python.html"
                         title="前の章へ">Expert Python Programming</a></p>
