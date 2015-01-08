@@ -51,14 +51,15 @@
 <p>Generate gh-pages
 &#8212;
 First, you should generate gh-pages branch and GitHub pages.</p>
-<blockquote>
-<div>cd repo
-git checkout &#8211;orphan gh-pages
+<div class="highlight-python"><div class="highlight"><pre>cd repo
+git checkout --orphan gh-pages
 git rm -rf .
-echo &#8220;First commit&#8221; &gt; index.html
+echo &quot;First commit&quot; &gt; index.html
 git add .
-git commit -m &#8220;Just to create the branch.&#8221;
-git push origin gh-pages</div></blockquote>
+git commit -m &quot;Just to create the branch.&quot;
+git push origin gh-pages
+</pre></div>
+</div>
 <p>Run sphinx-quickstart
 &#8212;</p>
 <blockquote>
@@ -67,27 +68,29 @@ sphinx-quickstart # in second option you should say yes</div></blockquote>
 <p>Add build target
 &#8212;
 Add below in Makefile.</p>
-<blockquote>
-<div><p>GH_PAGES_SOURCES = source code wiki Makefile</p>
-<p>...</p>
-<dl class="docutils">
-<dt>gh-pages:</dt>
-<dd>git checkout gh-pages
-rm -rf build _sources _static
-git checkout master $(GH_PAGES_SOURCES)
-git reset HEAD
-make html
-mv -fv build/html/* ./
-rm -rf $(GH_PAGES_SOURCES) build
-git add -A
-git ci -m &#8220;Generated gh-pages for <cite>git log master -1 &#8211;pretty=short &#8211;abbrev-commit</cite>&#8221; &amp;&amp; git push origin gh-pages ; git checkout master</dd>
-</dl>
-</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>GH_PAGES_SOURCES = source code wiki Makefile
+
+...
+
+gh-pages:
+    git checkout gh-pages
+    rm -rf build _sources _static
+    git checkout master $(GH_PAGES_SOURCES)
+    git reset HEAD
+    make html
+    mv -fv build/html/* ./
+    rm -rf $(GH_PAGES_SOURCES) build
+    git add -A
+    git ci -m &quot;Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`&quot; &amp;&amp; git push origin gh-pages ; git checkout master
+</pre></div>
+</div>
 <p>Add documents
-&#8212;</p>
-<blockquote>
-<div>vim source/expert_python.rst
-make gh-pages</div></blockquote>
+&#8212;
+If you add new documents, you can build and publish it by running below.:</p>
+<div class="highlight-python"><div class="highlight"><pre>vim source/expert_python.rst
+make gh-pages
+</pre></div>
+</div>
 <p>Reference
 &#8212;
 * <a class="reference external" href="http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html">http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html</a></p>
