@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Generate GitHub Pages with Sphinx &mdash; reference 0.1 ドキュメント</title>
+    <title>Generate GitHub Pages with Sphinx &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,21 +23,20 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
-    <link rel="top" title="reference 0.1 ドキュメント" href="index.html" />
+    <link rel="top" title="reference 0.1 documentation" href="index.html" />
     <link rel="prev" title="Expert Python Programming" href="expert_python.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>ナビゲーション</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="総合索引"
-             accesskey="I">索引</a></li>
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
         <li class="right" >
           <a href="expert_python.html" title="Expert Python Programming"
-             accesskey="P">前へ</a> |</li>
-        <li><a href="index.html">reference 0.1 ドキュメント</a> &raquo;</li> 
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -47,9 +46,9 @@
           <div class="body" role="main">
             
   <div class="section" id="generate-github-pages-with-sphinx">
-<h1>Generate GitHub Pages with Sphinx<a class="headerlink" href="#generate-github-pages-with-sphinx" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>Generate GitHub Pages with Sphinx<a class="headerlink" href="#generate-github-pages-with-sphinx" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="generate-gh-pages">
-<h2>Generate gh-pages<a class="headerlink" href="#generate-gh-pages" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Generate gh-pages<a class="headerlink" href="#generate-gh-pages" title="Permalink to this headline">¶</a></h2>
 <p>First, you should generate gh-pages branch and GitHub pages.</p>
 <div class="highlight-python"><div class="highlight"><pre>cd repo
 git checkout --orphan gh-pages
@@ -62,7 +61,7 @@ git push origin gh-pages
 </div>
 </div>
 <div class="section" id="run-sphinx-quickstart">
-<h2>Run sphinx-quickstart<a class="headerlink" href="#run-sphinx-quickstart" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Run sphinx-quickstart<a class="headerlink" href="#run-sphinx-quickstart" title="Permalink to this headline">¶</a></h2>
 <p>Generate sphinx base files.</p>
 <div class="highlight-python"><div class="highlight"><pre>git checkout master
 sphinx-quickstart # in second option you should say yes
@@ -70,7 +69,7 @@ sphinx-quickstart # in second option you should say yes
 </div>
 </div>
 <div class="section" id="add-build-target">
-<h2>Add build target<a class="headerlink" href="#add-build-target" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Add build target<a class="headerlink" href="#add-build-target" title="Permalink to this headline">¶</a></h2>
 <p>Add below in Makefile.</p>
 <div class="highlight-python"><div class="highlight"><pre>GH_PAGES_SOURCES = source code wiki Makefile
 
@@ -90,7 +89,7 @@ gh-pages:
 </div>
 </div>
 <div class="section" id="add-documents">
-<h2>Add documents<a class="headerlink" href="#add-documents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Add documents<a class="headerlink" href="#add-documents" title="Permalink to this headline">¶</a></h2>
 <p>If you add new documents, you can build and publish it by running below.:</p>
 <div class="highlight-python"><div class="highlight"><pre>vim source/expert_python.rst
 make gh-pages
@@ -98,7 +97,7 @@ make gh-pages
 </div>
 </div>
 <div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html">http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html</a></li>
 </ul>
@@ -111,7 +110,7 @@ make gh-pages
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">目次</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Generate GitHub Pages with Sphinx</a><ul>
 <li><a class="reference internal" href="#generate-gh-pages">Generate gh-pages</a></li>
@@ -123,26 +122,26 @@ make gh-pages
 </li>
 </ul>
 
-  <h4>前のトピックへ</h4>
+  <h4>Previous topic</h4>
   <p class="topless"><a href="expert_python.html"
-                        title="前の章へ">Expert Python Programming</a></p>
+                        title="previous chapter">Expert Python Programming</a></p>
   <div role="note" aria-label="source link">
-    <h3>このページ</h3>
+    <h3>This Page</h3>
     <ul class="this-page-menu">
       <li><a href="_sources/generate_gh-pages_with_sphinx.txt"
-            rel="nofollow">ソースコードを表示</a></li>
+            rel="nofollow">Show Source</a></li>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>クイック検索</h3>
+  <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
-      <input type="submit" value="検索" />
+      <input type="submit" value="Go" />
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
     <p class="searchtip" style="font-size: 90%">
-    モジュール、クラス、または関数名を入力してください
+    Enter search terms or a module, class or function name.
     </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
@@ -151,20 +150,20 @@ make gh-pages
       <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
-      <h3>ナビゲーション</h3>
+      <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="総合索引"
-             >索引</a></li>
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
         <li class="right" >
           <a href="expert_python.html" title="Expert Python Programming"
-             >前へ</a> |</li>
-        <li><a href="index.html">reference 0.1 ドキュメント</a> &raquo;</li> 
+             >previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Kentaro Wada.
-      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1 で生成しました。
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
     </div>
   </body>
 </html>
