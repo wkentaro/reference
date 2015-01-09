@@ -15,6 +15,8 @@ First, you should generate gh-pages branch and GitHub pages. ::
 
 Run sphinx-quickstart
 +++++++++++++++++++++
+Generate sphinx base files. ::
+
   git checkout master
   sphinx-quickstart # in second option you should say yes
 
