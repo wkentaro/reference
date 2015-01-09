@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# ref documentation build configuration file, created by
+# reference documentation build configuration file, created by
 # sphinx-quickstart on Thu Jan  8 20:26:15 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ref'
+project = u'reference'
 copyright = u'2015, Kentaro Wada'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -193,7 +193,7 @@ html_static_path = ['_static']
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'refdoc'
+htmlhelp_basename = 'referencedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -215,7 +215,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ref.tex', u'ref Documentation',
+  ('index', 'reference.tex', u'reference Documentation',
    u'Kentaro Wada', 'manual'),
 ]
 
@@ -245,7 +245,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'ref', u'ref Documentation',
+    ('index', 'reference', u'reference Documentation',
      [u'Kentaro Wada'], 1)
 ]
 
@@ -259,8 +259,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ref', u'ref Documentation',
-   u'Kentaro Wada', 'ref', 'One line description of project.',
+  ('index', 'reference', u'reference Documentation',
+   u'Kentaro Wada', 'reference', 'One line description of project.',
    'Miscellaneous'),
 ]
 
