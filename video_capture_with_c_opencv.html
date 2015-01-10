@@ -54,11 +54,26 @@
 <li>Homebrew</li>
 </ul>
 <p>Install opencv</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>brew install opencv
+</pre></div>
+</div>
 </div>
 <div class="section" id="how-to-use">
 <h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
 <p>Header files</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp">#include &lt;cv.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="cp">#include &lt;highgui.h&gt;</span>
+</pre></div>
+</div>
 <p>Compile &amp; Execute</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># compile</span>
+<span class="nv">$ </span>gcc -o video_capture video_capture.c <span class="sb">`</span>pkg-config opencv --cflags<span class="sb">`</span> <span class="sb">`</span>pkg-config opencv --libs<span class="sb">`</span>
+
+<span class="c"># execute</span>
+<span class="nv">$ </span>./video_capture
+</pre></div>
+</div>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
