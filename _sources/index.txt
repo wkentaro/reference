@@ -9,7 +9,7 @@ Welcome to ref's documentation!
 Contents:
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
   expert_python
   generate_gh-pages_with_sphinx
