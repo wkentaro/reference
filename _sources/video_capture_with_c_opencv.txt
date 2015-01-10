@@ -6,26 +6,29 @@ Setup Environment
 * Mac OS X
 * Homebrew
 
-Install opencv::
+Install opencv
 
-  brew install opencv
+.. highlight:: bash
+  $ brew install opencv
 
 
 How to use
 ++++++++++
-Header files::
+Header files
 
+.. highlight:: c
   #include <cv.h>
   #include <ctype.h>
   #include <highgui.h>
 
-Compile::
+Compile & Execute
 
-  gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
+.. highlight:: bash
+  # compile
+  $ gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
 
-Execute::
-
-  ./video_capture
+  # execute
+  $ ./video_capture
 
 
 Example
