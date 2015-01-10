@@ -8,7 +8,7 @@ Setup Environment
 
 Install opencv
 
-.. highlight:: bash
+.. code-block:: bash
   $ brew install opencv
 
 
@@ -16,14 +16,14 @@ How to use
 ++++++++++
 Header files
 
-.. highlight:: c
+.. code-block:: c
   #include <cv.h>
   #include <ctype.h>
   #include <highgui.h>
 
 Compile & Execute
 
-.. highlight:: bash
+.. code-block:: bash
   # compile
   $ gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
 
