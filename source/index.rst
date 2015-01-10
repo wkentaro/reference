@@ -11,8 +11,9 @@ Contents:
 .. toctree::
   :maxdepth: 1
 
-  expert_python
   generate_gh-pages_with_sphinx
+  video_capture_with_c_opencv
+
 
 
 Indices and tables
