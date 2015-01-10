@@ -53,26 +53,89 @@
 <li>Mac OS X</li>
 <li>Homebrew</li>
 </ul>
-<dl class="docutils">
-<dt>Install opencv::</dt>
-<dd>brew install opencv</dd>
-</dl>
+<p>Install opencv:</p>
+<div class="highlight-python"><div class="highlight"><pre>brew install opencv
+</pre></div>
+</div>
 </div>
 <div class="section" id="how-to-use">
 <h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>Header files::</dt>
-<dd>#include &lt;cv.h&gt;
-#include &lt;ctype.h&gt;
-#include &lt;highgui.h&gt;</dd>
-<dt>Compile::</dt>
-<dd>gcc -o video_capture video_capture.c <cite>pkg-config opencv &#8211;cflags</cite> <cite>pkg-config opencv &#8211;libs</cite></dd>
-<dt>Execute::</dt>
-<dd>./video_capture</dd>
-</dl>
+<p>Header files:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#include &lt;cv.h&gt;</span>
+<span class="c">#include &lt;ctype.h&gt;</span>
+<span class="c">#include &lt;highgui.h&gt;</span>
+</pre></div>
+</div>
+<p>Compile:</p>
+<div class="highlight-python"><div class="highlight"><pre>gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
+</pre></div>
+</div>
+<p>Execute:</p>
+<div class="highlight-python"><div class="highlight"><pre>./video_capture
+</pre></div>
+</div>
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-c"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">#include &lt;cv.h&gt;</span>
+<span class="cp">#include &lt;ctype.h&gt;</span>
+<span class="cp">#include &lt;highgui.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// キーボード入力用</span>
+    <span class="n">CvCapture</span> <span class="o">*</span><span class="n">capture</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="c1">// カメラキャプチャ用</span>
+    <span class="n">IplImage</span> <span class="o">*</span><span class="n">frame</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="c1">// キャプチャ画像用</span>
+
+    <span class="c1">// カメラキャプチャ取得用</span>
+    <span class="n">capture</span> <span class="o">=</span> <span class="n">cvCreateCameraCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+    <span class="c1">// キャプチャ画像を表示するためのウィンドウを作成</span>
+    <span class="n">cvNamedWindow</span><span class="p">(</span><span class="s">&quot;Capture&quot;</span><span class="p">,</span> <span class="n">CV_WINDOW_AUTOSIZE</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// キャプチャ画像を取得</span>
+        <span class="n">frame</span> <span class="o">=</span> <span class="n">cvQueryFrame</span><span class="p">(</span><span class="n">capture</span><span class="p">);</span>
+
+        <span class="c1">// 取得したキャプチャ画像を表示</span>
+        <span class="n">cvShowImage</span><span class="p">(</span><span class="s">&quot;Capture&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="p">);</span>
+
+        <span class="c1">// キーボード入力を待つ</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">cvWaitKey</span> <span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">&#39;\x1b&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Escキー</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
 <p>More information: <a class="reference external" href="https://github.com/wkentaro/c-opencv/tree/master/camera_capture">https://github.com/wkentaro/c-opencv/tree/master/camera_capture</a></p>
 </div>
 </div>
