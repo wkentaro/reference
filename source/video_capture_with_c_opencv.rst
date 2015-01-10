@@ -9,6 +9,7 @@ Setup Environment
 Install opencv
 
 .. code-block:: bash
+
   $ brew install opencv
 
 
@@ -17,6 +18,7 @@ How to use
 Header files
 
 .. code-block:: c
+
   #include <cv.h>
   #include <ctype.h>
   #include <highgui.h>
@@ -24,6 +26,7 @@ Header files
 Compile & Execute
 
 .. code-block:: bash
+
   # compile
   $ gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
 
@@ -35,6 +38,5 @@ Example
 +++++++
 .. literalinclude:: code/video_capture.c
   :language: c
-  :linenos:
 
 More information: https://github.com/wkentaro/c-opencv/tree/master/camera_capture
