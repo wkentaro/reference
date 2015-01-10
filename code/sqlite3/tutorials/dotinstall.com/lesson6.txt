@@ -1,0 +1,13 @@
+データ型の指定
+
+NULL
+INTEGER 整数値
+REAL 小数の入った数値
+TEXT 文字列
+BLOB (Binary Large Object)
+
+* データ型は指定できるけど必須ではない
+
+create table users (name text, email text, age integer);
+
+* データ型を指定するとそれになるように努力するけど確約しない

@@ -1,0 +1,8 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE users (name, score);
+INSERT INTO "users" VALUES('taguchi','88200');
+INSERT INTO "users" VALUES('sasaki','400');
+INSERT INTO "users" VALUES('yamashita','120');
+INSERT INTO "users" VALUES('fkoji','800');
+COMMIT;
