@@ -1,0 +1,28 @@
+Changing file encoding command nkf
+==================================
+
+Installation
+++++++++++++
+.. code-block: bash
+
+  $ brew install nkf
+
+
+Example
++++++++
+.. code-block: bash
+
+  $ ## 文字列コードを調べる
+  $ nkf -g data1.sjis.csv
+  Shift_JIS
+
+  $ ## UTF-8へ変換[オプション-w]
+  $ nkf -w data1.sjis.csv > data1.utf8.csv
+  $ nkf -g data1.utf8.csv
+  UTF-8
+
+  $ ## Shift_JISへの変換[オプション-S]
+  $ ## 同じファイル名で変換[オプション--overwrite]
+  $ nkf -s --overwrite data1.csv
+  $ nkf -g data1.csv
+  Shift_JIS
