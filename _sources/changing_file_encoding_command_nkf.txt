@@ -3,14 +3,14 @@ Changing file encoding command nkf
 
 Installation
 ++++++++++++
-.. code-block: bash
+.. code-block:: bash
 
   $ brew install nkf
 
 
 Example
 +++++++
-.. code-block: bash
+.. code-block:: bash
 
   $ ## 文字列コードを調べる
   $ nkf -g data1.sjis.csv

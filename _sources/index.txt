@@ -13,7 +13,7 @@ Contents:
 
   generate_gh-pages_with_sphinx
   video_capture_with_c_opencv
-  unix_cmd_nkf
+  changing_file_encoding_command_nkf
 
 
 

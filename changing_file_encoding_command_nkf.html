@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to ref’s documentation! &mdash; reference 0.1 documentation</title>
+    <title>Changing file encoding command nkf &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="reference 0.1 documentation" href="#" />
-    <link rel="next" title="Generate GitHub Pages with Sphinx" href="generate_gh-pages_with_sphinx.html" /> 
+    <link rel="top" title="reference 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Video capture with C using OpenCV" href="video_capture_with_c_opencv.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -34,9 +34,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="generate_gh-pages_with_sphinx.html" title="Generate GitHub Pages with Sphinx"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">reference 0.1 documentation</a> &raquo;</li> 
+          <a href="video_capture_with_c_opencv.html" title="Video capture with C using OpenCV"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -45,24 +45,33 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-ref-s-documentation">
-<h1>Welcome to ref&#8217;s documentation!<a class="headerlink" href="#welcome-to-ref-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="generate_gh-pages_with_sphinx.html">Generate GitHub Pages with Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="video_capture_with_c_opencv.html">Video capture with C using OpenCV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changing_file_encoding_command_nkf.html">Changing file encoding command nkf</a></li>
-</ul>
+  <div class="section" id="changing-file-encoding-command-nkf">
+<h1>Changing file encoding command nkf<a class="headerlink" href="#changing-file-encoding-command-nkf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>brew install nkf
+</pre></div>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
-</ul>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="c">## 文字列コードを調べる</span>
+<span class="nv">$ </span>nkf -g data1.sjis.csv
+Shift_JIS
+
+<span class="nv">$ </span><span class="c">## UTF-8へ変換[オプション-w]</span>
+<span class="nv">$ </span>nkf -w data1.sjis.csv &gt; data1.utf8.csv
+<span class="nv">$ </span>nkf -g data1.utf8.csv
+UTF-8
+
+<span class="nv">$ </span><span class="c">## Shift_JISへの変換[オプション-S]</span>
+<span class="nv">$ </span><span class="c">## 同じファイル名で変換[オプション--overwrite]</span>
+<span class="nv">$ </span>nkf -s --overwrite data1.csv
+<span class="nv">$ </span>nkf -g data1.csv
+Shift_JIS
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -71,19 +80,22 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to ref&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">Changing file encoding command nkf</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
 </ul>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="generate_gh-pages_with_sphinx.html"
-                        title="next chapter">Generate GitHub Pages with Sphinx</a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="video_capture_with_c_opencv.html"
+                        title="previous chapter">Video capture with C using OpenCV</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
+      <li><a href="_sources/changing_file_encoding_command_nkf.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -111,9 +123,9 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="generate_gh-pages_with_sphinx.html" title="Generate GitHub Pages with Sphinx"
-             >next</a> |</li>
-        <li><a href="#">reference 0.1 documentation</a> &raquo;</li> 
+          <a href="video_capture_with_c_opencv.html" title="Video capture with C using OpenCV"
+             >previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
