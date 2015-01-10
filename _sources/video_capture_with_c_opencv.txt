@@ -38,6 +38,5 @@ Example
 +++++++
 .. literalinclude:: code/video_capture.c
   :language: c
-  :linenos:
 
 More information: https://github.com/wkentaro/c-opencv/tree/master/camera_capture
