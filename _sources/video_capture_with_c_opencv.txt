@@ -1,0 +1,33 @@
+Video capture with C using OpenCV
+=================================
+
+Setup Environment
++++++++++++++++++
+* Mac OS X
+* Homebrew
+
+Install opencv::
+  brew install opencv
+
+
+How to use
+++++++++++
+Header files::
+  #include <cv.h>
+  #include <ctype.h>
+  #include <highgui.h>
+
+Compile::
+  gcc -o video_capture video_capture.c `pkg-config opencv --cflags` `pkg-config opencv --libs`
+
+Execute::
+  ./video_capture
+
+
+Example
++++++++
+.. literalinclude:: https://raw.githubusercontent.com/wkentaro/c-opencv/master/camera_capture/camera_capture.c
+  :language: c
+  :linenos:
+
+More information: https://github.com/wkentaro/c-opencv/tree/master/camera_capture
