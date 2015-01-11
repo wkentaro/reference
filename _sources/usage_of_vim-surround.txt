@@ -17,9 +17,9 @@ editing html
 
    Hello, world!
 
-select the region of `Hello, world!` and enter
+select the region of :code:`Hello, world!` and enter
 
-  `S<h1>`
+  :code:`S<h1>`
 
 this gets below
 
