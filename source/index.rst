@@ -11,10 +11,10 @@ Contents:
 .. toctree::
   :maxdepth: 1
 
-   generate_gh-pages_with_sphinx
-   video_capture_with_c_opencv
-   usage_of_nkf
-   usage_of_vim-surround
+  generate_gh-pages_with_sphinx
+  video_capture_with_c_opencv
+  usage_of_nkf
+  usage_of_vim-surround
 
 
 
