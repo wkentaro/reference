@@ -1,5 +1,5 @@
-Changing file encoding command nkf
-==================================
+Usage of changing file encoding command nkf
+===========================================
 
 Installation
 ++++++++++++
