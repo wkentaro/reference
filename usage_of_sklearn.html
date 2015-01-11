@@ -57,20 +57,34 @@
 <h2>Get data<a class="headerlink" href="#get-data" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sklearn-datasets-fetch-mldata">
 <h3>sklearn.datasets.fetch_mldata<a class="headerlink" href="#sklearn-datasets-fetch-mldata" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_mldata</span>
-<span class="c"># argument of fetch_mldata is found in http://mldata.org/</span>
-
-<span class="c"># MNIST</span>
-<span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_mldata</span><span class="p">(</span><span class="s">&#39;MNIST original&#39;</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">target</span>
-
-<span class="c"># Digits</span>
-<span class="n">digits</span> <span class="o">=</span> <span class="n">fetch_mldata</span><span class="p">(</span><span class="s">&#39;digits&#39;</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span>
-</pre></div>
+<p>Get dataset from mldata.org.
+.. code-block :: python</p>
+<blockquote>
+<div><p>from sklearn.datasets import fetch_mldata
+# argument of fetch_mldata is found in <a class="reference external" href="http://mldata.org/">http://mldata.org/</a></p>
+<p># MNIST
+mnist = fetch_mldata(&#8216;MNIST original&#8217;)
+X = mnist.data
+y = mnist.target</p>
+<p># Digits
+digits = fetch_mldata(&#8216;digits&#8217;)
+X = digits.data
+y = digits.target</p>
+</div></blockquote>
 </div>
+<div class="section" id="sklearn-cross-validation-stratifiedkfold">
+<h3>sklearn.cross_validation.StratifiedKFold<a class="headerlink" href="#sklearn-cross-validation-stratifiedkfold" title="Permalink to this headline">¶</a></h3>
+<p>Cross validation using sklearn.cross_validation.StratifiedKFold.
+.. code-block :: python</p>
+<blockquote>
+<div><p>scores = np.zeros(len(skf))
+skf = StratifiedKFold(y, n_folds=3)
+for i, (train_index, test_index) in enumerate(skf):</p>
+<blockquote>
+<div>clf.fit(X[train_index], y[train_index])
+score = clf.score(X[test_index], y[test_index])
+scores[i] = score</div></blockquote>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="reference">
@@ -93,6 +107,7 @@
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#get-data">Get data</a><ul>
 <li><a class="reference internal" href="#sklearn-datasets-fetch-mldata">sklearn.datasets.fetch_mldata</a></li>
+<li><a class="reference internal" href="#sklearn-cross-validation-stratifiedkfold">sklearn.cross_validation.StratifiedKFold</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#reference">Reference</a></li>
