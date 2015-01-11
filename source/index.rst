@@ -14,6 +14,7 @@ Contents:
   generate_gh-pages_with_sphinx
   video_capture_with_c_opencv
   changing_file_encoding_command_nkf
+  usage_of_vim-surround
 
 
 
