@@ -15,6 +15,7 @@ Contents:
   video_capture_with_c_opencv
   usage_of_nkf
   usage_of_vim-surround
+  usage_of_qpdf
 
 
 
