@@ -1,0 +1,34 @@
+Usage of scikit-learn
+=====================
+
+Installation
+++++++++++++
+.. code-block :: bash
+
+   $ pip install scikit-learn
+
+
+Get data
+++++++++
+
+sklearn.datasets.fetch_mldata
+-----------------------------
+.. code-block :: python
+
+   from sklearn.datasets import fetch_mldata
+   # argument of fetch_mldata is found in http://mldata.org/
+
+   # MNIST
+   mnist = fetch_mldata('MNIST original')
+   X = mnist.data
+   y = mnist.target
+
+   # Digits
+   digits = fetch_mldata('digits')
+   X = digits.data
+   y = digits.target
+
+
+Reference
++++++++++
+* http://scikit-learn.org/stable/index.html
