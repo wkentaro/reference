@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Welcome to ref’s documentation! &mdash; reference 0.1 documentation</title>
+    <title>Usage of vim-surround &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="reference 0.1 documentation" href="#" />
-    <link rel="next" title="Generate GitHub Pages with Sphinx" href="generate_gh-pages_with_sphinx.html" /> 
+    <link rel="top" title="reference 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Changing file encoding command nkf" href="changing_file_encoding_command_nkf.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -34,9 +34,9 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="generate_gh-pages_with_sphinx.html" title="Generate GitHub Pages with Sphinx"
-             accesskey="N">next</a> |</li>
-        <li><a href="#">reference 0.1 documentation</a> &raquo;</li> 
+          <a href="changing_file_encoding_command_nkf.html" title="Changing file encoding command nkf"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -45,25 +45,36 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="welcome-to-ref-s-documentation">
-<h1>Welcome to ref&#8217;s documentation!<a class="headerlink" href="#welcome-to-ref-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="generate_gh-pages_with_sphinx.html">Generate GitHub Pages with Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="video_capture_with_c_opencv.html">Video capture with C using OpenCV</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changing_file_encoding_command_nkf.html">Changing file encoding command nkf</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage_of_vim-surround.html">Usage of vim-surround</a></li>
-</ul>
+  <div class="section" id="usage-of-vim-surround">
+<h1>Usage of vim-surround<a class="headerlink" href="#usage-of-vim-surround" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vim"><div class="highlight"><pre>NeoBundle <span class="s1">&#39;tpope/vim-surround&#39;</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="editing-html">
+<h3>editing html<a class="headerlink" href="#editing-html" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre>Hello, world!
+</pre></div>
+</div>
+<p>select the region of <cite>Hello, world!</cite> and enter</p>
+<blockquote>
+<div><cite>S&lt;h1&gt;</cite></div></blockquote>
+<p>this gets below</p>
+<div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
-<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
-<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+<li><a class="reference external" href="https://github.com/tpope/vim-surround">https://github.com/tpope/vim-surround</a></li>
 </ul>
+</div>
 </div>
 
 
@@ -72,19 +83,26 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="#">Table Of Contents</a></h3>
+  <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Welcome to ref&#8217;s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">Usage of vim-surround</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#example">Example</a><ul>
+<li><a class="reference internal" href="#editing-html">editing html</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference">Reference</a></li>
+</ul>
+</li>
 </ul>
 
-  <h4>Next topic</h4>
-  <p class="topless"><a href="generate_gh-pages_with_sphinx.html"
-                        title="next chapter">Generate GitHub Pages with Sphinx</a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="changing_file_encoding_command_nkf.html"
+                        title="previous chapter">Changing file encoding command nkf</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/index.txt"
+      <li><a href="_sources/usage_of_vim-surround.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -112,9 +130,9 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="generate_gh-pages_with_sphinx.html" title="Generate GitHub Pages with Sphinx"
-             >next</a> |</li>
-        <li><a href="#">reference 0.1 documentation</a> &raquo;</li> 
+          <a href="changing_file_encoding_command_nkf.html" title="Changing file encoding command nkf"
+             >previous</a> |</li>
+        <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
