@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Generate GitHub Pages with Sphinx &mdash; reference 0.1 documentation</title>
+    <title>Usage of changing file encoding command nkf &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -41,62 +41,32 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="generate-github-pages-with-sphinx">
-<h1>Generate GitHub Pages with Sphinx<a class="headerlink" href="#generate-github-pages-with-sphinx" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="generate-gh-pages">
-<h2>Generate gh-pages<a class="headerlink" href="#generate-gh-pages" title="Permalink to this headline">¶</a></h2>
-<p>First, you should generate gh-pages branch and GitHub pages.</p>
-<div class="highlight-python"><div class="highlight"><pre>cd repo
-git checkout --orphan gh-pages
-git rm -rf .
-echo &quot;First commit&quot; &gt; index.html
-git add .
-git commit -m &quot;Just to create the branch.&quot;
-git push origin gh-pages
+  <div class="section" id="usage-of-changing-file-encoding-command-nkf">
+<h1>Usage of changing file encoding command nkf<a class="headerlink" href="#usage-of-changing-file-encoding-command-nkf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>brew install nkf
 </pre></div>
 </div>
 </div>
-<div class="section" id="run-sphinx-quickstart">
-<h2>Run sphinx-quickstart<a class="headerlink" href="#run-sphinx-quickstart" title="Permalink to this headline">¶</a></h2>
-<p>Generate sphinx base files.</p>
-<div class="highlight-python"><div class="highlight"><pre>git checkout master
-sphinx-quickstart # in second option you should say yes
-</pre></div>
-</div>
-</div>
-<div class="section" id="add-build-target">
-<h2>Add build target<a class="headerlink" href="#add-build-target" title="Permalink to this headline">¶</a></h2>
-<p>Add below in Makefile.</p>
-<div class="highlight-python"><div class="highlight"><pre>GH_PAGES_SOURCES = source code wiki Makefile
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="c">## 文字列コードを調べる</span>
+<span class="nv">$ </span>nkf -g data1.sjis.csv
+Shift_JIS
 
-...
+<span class="nv">$ </span><span class="c">## UTF-8へ変換[オプション-w]</span>
+<span class="nv">$ </span>nkf -w data1.sjis.csv &gt; data1.utf8.csv
+<span class="nv">$ </span>nkf -g data1.utf8.csv
+UTF-8
 
-gh-pages:
-    git checkout gh-pages
-    rm -rf build _sources _static
-    git checkout master $(GH_PAGES_SOURCES)
-    git reset HEAD
-    make html
-    mv -fv build/html/* ./
-    rm -rf $(GH_PAGES_SOURCES) build
-    git add -A
-    git ci -m &quot;Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`&quot; &amp;&amp; git push origin gh-pages ; git checkout master
+<span class="nv">$ </span><span class="c">## Shift_JISへの変換[オプション-S]</span>
+<span class="nv">$ </span><span class="c">## 同じファイル名で変換[オプション--overwrite]</span>
+<span class="nv">$ </span>nkf -s --overwrite data1.csv
+<span class="nv">$ </span>nkf -g data1.csv
+Shift_JIS
 </pre></div>
 </div>
-</div>
-<div class="section" id="add-documents">
-<h2>Add documents<a class="headerlink" href="#add-documents" title="Permalink to this headline">¶</a></h2>
-<p>If you add new documents, you can build and publish it by running below.:</p>
-<div class="highlight-python"><div class="highlight"><pre>vim source/expert_python.rst
-make gh-pages
-</pre></div>
-</div>
-</div>
-<div class="section" id="reference">
-<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html">http://blog.nikhilism.com/2012/08/automatic-github-pages-generation-from.html</a></li>
-</ul>
 </div>
 </div>
 
@@ -108,12 +78,9 @@ make gh-pages
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Generate GitHub Pages with Sphinx</a><ul>
-<li><a class="reference internal" href="#generate-gh-pages">Generate gh-pages</a></li>
-<li><a class="reference internal" href="#run-sphinx-quickstart">Run sphinx-quickstart</a></li>
-<li><a class="reference internal" href="#add-build-target">Add build target</a></li>
-<li><a class="reference internal" href="#add-documents">Add documents</a></li>
-<li><a class="reference internal" href="#reference">Reference</a></li>
+<li><a class="reference internal" href="#">Usage of changing file encoding command nkf</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -121,7 +88,7 @@ make gh-pages
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/generate_gh-pages_with_sphinx.txt"
+      <li><a href="_sources/usage_of_nkf.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
