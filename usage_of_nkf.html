@@ -59,17 +59,17 @@
 </div>
 <div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="c">## 文字列コードを調べる</span>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="c"># Check string encoding</span>
 <span class="nv">$ </span>nkf -g data1.sjis.csv
 Shift_JIS
 
-<span class="nv">$ </span><span class="c">## UTF-8へ変換[オプション-w]</span>
+<span class="nv">$ </span><span class="c"># Convert to UTF-8 (option: -w)</span>
 <span class="nv">$ </span>nkf -w data1.sjis.csv &gt; data1.utf8.csv
 <span class="nv">$ </span>nkf -g data1.utf8.csv
 UTF-8
 
-<span class="nv">$ </span><span class="c">## Shift_JISへの変換[オプション-S]</span>
-<span class="nv">$ </span><span class="c">## 同じファイル名で変換[オプション--overwrite]</span>
+<span class="nv">$ </span><span class="c"># Convert to Shift JIS (option: -s)</span>
+<span class="nv">$ </span><span class="c"># Convert with same filename (option: --overwrite)</span>
 <span class="nv">$ </span>nkf -s --overwrite data1.csv
 <span class="nv">$ </span>nkf -g data1.csv
 Shift_JIS

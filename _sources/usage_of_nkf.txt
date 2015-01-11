@@ -12,17 +12,17 @@ Example
 +++++++
 .. code-block:: bash
 
-  $ ## 文字列コードを調べる
+  $ # Check string encoding
   $ nkf -g data1.sjis.csv
   Shift_JIS
 
-  $ ## UTF-8へ変換[オプション-w]
+  $ # Convert to UTF-8 (option: -w)
   $ nkf -w data1.sjis.csv > data1.utf8.csv
   $ nkf -g data1.utf8.csv
   UTF-8
 
-  $ ## Shift_JISへの変換[オプション-S]
-  $ ## 同じファイル名で変換[オプション--overwrite]
+  $ # Convert to Shift JIS (option: -s)
+  $ # Convert with same filename (option: --overwrite)
   $ nkf -s --overwrite data1.csv
   $ nkf -g data1.csv
   Shift_JIS
