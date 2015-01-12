@@ -50,9 +50,8 @@
 <div class="section" id="edit-mail-cf">
 <h2>Edit mail.cf<a class="headerlink" href="#edit-mail-cf" title="Permalink to this headline">¶</a></h2>
 <p>Add following line on /etc/postfix/main.cf.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/postfix/main.cf
-</pre></div>
-</div>
+<blockquote>
+<div><code class="code docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/postfix/main.cf</span></code></div></blockquote>
 <div class="highlight-pfmain"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -70,9 +69,8 @@
 <div class="section" id="add-password-config-file">
 <h2>Add password config file<a class="headerlink" href="#add-password-config-file" title="Permalink to this headline">¶</a></h2>
 <p>Add following line on /etc/postfix/sasl_passwd.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/postfix/sasl_passwd
-</pre></div>
-</div>
+<blockquote>
+<div><code class="code docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/postfix/sasl_passwd</span></code></div></blockquote>
 <div class="highlight-pfmain"><div class="highlight"><pre>[smtp.gmail.com]:587 username@gmail.com:password
 </pre></div>
 </div>
@@ -89,9 +87,8 @@
 </div>
 <div class="section" id="test">
 <h2>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>date <span class="p">|</span> mail -s <span class="s2">&quot;testing&quot;</span> email@adderess.to
-</pre></div>
-</div>
+<blockquote>
+<div><code class="code docutils literal"><span class="pre">$</span> <span class="pre">date</span> <span class="pre">|</span> <span class="pre">mail</span> <span class="pre">-s</span> <span class="pre">&quot;testing&quot;</span> <span class="pre">email&#64;adderess.to</span></code></div></blockquote>
 </div>
 <div class="section" id="reference">
 <h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>

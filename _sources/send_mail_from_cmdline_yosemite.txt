@@ -5,9 +5,7 @@ Edit mail.cf
 ++++++++++++
 Add following line on /etc/postfix/main.cf.
 
-.. code-block :: bash
-
-   $ sudo vim /etc/postfix/main.cf
+   :code:`$ sudo vim /etc/postfix/main.cf`
 
 
 .. code-block :: pfmain
@@ -25,9 +23,7 @@ Add password config file
 ++++++++++++++++++++++++
 Add following line on /etc/postfix/sasl_passwd.
 
-.. code-block :: bash
-
-   $ sudo vim /etc/postfix/sasl_passwd
+   :code:`$ sudo vim /etc/postfix/sasl_passwd`
 
 
 .. code-block :: pfmain
@@ -50,9 +46,7 @@ Run the following commands.
 Test
 ++++
 
-.. code-block :: bash
-
-   $ date | mail -s "testing" email@adderess.to
+   :code:`$ date | mail -s "testing" email@adderess.to`
 
 
 Reference
