@@ -53,6 +53,19 @@
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/postfix/main.cf
 </pre></div>
 </div>
+<div class="highlight-pfmain"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre>  relayhost = [smtp.gmail.com]:587
+  smtp_sasl_auth_enable = yes
+  smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+  smtp_sasl_security_options = noanonymous
+  smtp_use_tls = yes
+  smtp_sasl_mechanism_filter = plain # only for yosemite
+</pre></div>
+</td></tr></table></div>
 </div>
 <div class="section" id="add-password-config-file">
 <h2>Add password config file<a class="headerlink" href="#add-password-config-file" title="Permalink to this headline">¶</a></h2>

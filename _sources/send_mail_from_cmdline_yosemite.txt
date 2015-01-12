@@ -11,7 +11,7 @@ Add following line on /etc/postfix/main.cf.
 
 
 .. code-block :: pfmain
- :linos:
+ :linenos:
 
    relayhost = [smtp.gmail.com]:587
    smtp_sasl_auth_enable = yes
