@@ -11,14 +11,14 @@ Add following line on /etc/postfix/main.cf.
 
 
 .. code-block :: pfmain
-   :linos:
+ :linos:
 
-  relayhost = [smtp.gmail.com]:587
-  smtp_sasl_auth_enable = yes
-  smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
-  smtp_sasl_security_options = noanonymous
-  smtp_use_tls = yes
-  smtp_sasl_mechanism_filter = plain # only for yosemite
+   relayhost = [smtp.gmail.com]:587
+   smtp_sasl_auth_enable = yes
+   smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+   smtp_sasl_security_options = noanonymous
+   smtp_use_tls = yes
+   smtp_sasl_mechanism_filter = plain # only for yosemite
 
 
 Add password config file
