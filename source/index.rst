@@ -17,6 +17,7 @@ Contents:
   usage_of_vim-surround
   usage_of_qpdf
   usage_of_sklearn
+  send_mail_from_cmdline_yosemite
 
 
 
