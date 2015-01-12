@@ -50,19 +50,14 @@
 <div class="section" id="edit-mail-cf">
 <h2>Edit mail.cf<a class="headerlink" href="#edit-mail-cf" title="Permalink to this headline">¶</a></h2>
 <p>Add following line on /etc/postfix/main.cf. <code class="code docutils literal"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">vim</span> <span class="pre">/etc/postfix/main.cf</span></code></p>
-<div class="highlight-pfmain"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre>  relayhost = [smtp.gmail.com]:587
-  smtp_sasl_auth_enable = yes
-  smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
-  smtp_sasl_security_options = noanonymous
-  smtp_use_tls = yes
-  smtp_sasl_mechanism_filter = plain # only for yosemite
+<div class="highlight-pfmain"><div class="highlight"><pre>relayhost = [smtp.gmail.com]:587
+smtp_sasl_auth_enable = yes
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_sasl_security_options = noanonymous
+smtp_use_tls = yes
+smtp_sasl_mechanism_filter = plain # only for yosemite
 </pre></div>
-</td></tr></table></div>
+</div>
 </div>
 <div class="section" id="add-password-config-file">
 <h2>Add password config file<a class="headerlink" href="#add-password-config-file" title="Permalink to this headline">¶</a></h2>
