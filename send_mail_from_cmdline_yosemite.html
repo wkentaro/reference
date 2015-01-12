@@ -49,17 +49,17 @@
 <h1>Send mails from command line on Mac OS X 10.10 Yosemite<a class="headerlink" href="#send-mails-from-command-line-on-mac-os-x-10-10-yosemite" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="edit-mail-cf">
 <h2>Edit mail.cf<a class="headerlink" href="#edit-mail-cf" title="Permalink to this headline">¶</a></h2>
-<p>Add following line on /etc/postfix/main.cf.
-.. code-block :: bash</p>
-<blockquote>
-<div>$ sudo vim /etc/postfix/main.cf</div></blockquote>
+<p>Add following line on /etc/postfix/main.cf.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/postfix/main.cf
+</pre></div>
+</div>
 </div>
 <div class="section" id="add-password-config-file">
 <h2>Add password config file<a class="headerlink" href="#add-password-config-file" title="Permalink to this headline">¶</a></h2>
-<p>Add following line on /etc/postfix/sasl_passwd.
-.. code-block :: bash</p>
-<blockquote>
-<div>$ sudo vim /etc/postfix/sasl_passwd</div></blockquote>
+<p>Add following line on /etc/postfix/sasl_passwd.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo vim /etc/postfix/sasl_passwd
+</pre></div>
+</div>
 <div class="highlight-pfmain"><div class="highlight"><pre>[smtp.gmail.com]:587 username@gmail.com:password
 </pre></div>
 </div>

@@ -4,6 +4,7 @@ Send mails from command line on Mac OS X 10.10 Yosemite
 Edit mail.cf
 ++++++++++++
 Add following line on /etc/postfix/main.cf.
+
 .. code-block :: bash
 
    $ sudo vim /etc/postfix/main.cf
@@ -23,6 +24,7 @@ Add following line on /etc/postfix/main.cf.
 Add password config file
 ++++++++++++++++++++++++
 Add following line on /etc/postfix/sasl_passwd.
+
 .. code-block :: bash
 
    $ sudo vim /etc/postfix/sasl_passwd
