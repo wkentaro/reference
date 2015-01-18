@@ -6,8 +6,8 @@ Installation
 
 .. code-block :: bash
 
-   brew install sqlite3
-   pip install sqlite3
+   $ brew install sqlite3
+   $ pip install sqlite3
 
 
 Get data from command line
