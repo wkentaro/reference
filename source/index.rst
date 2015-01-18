@@ -20,6 +20,7 @@ Contents:
   send_mail_from_cmdline_yosemite
   usage_of_sqlite3
   sudo_from_web
+  apache_config_for_wsgi_python
 
 
 Indices and tables
