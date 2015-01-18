@@ -53,40 +53,45 @@
 <h1>Usage of sqlite3 &amp; Python<a class="headerlink" href="#usage-of-sqlite3-python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>brew install sqlite3
-<span class="nv">$ </span>pip install sqlite3
+<p>Install sqlite3 from command line:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ brew install sqlite3 # sqlite command on Mac OS X
+$ pip install sqlite3  # Python package
 </pre></div>
 </div>
 </div>
 <div class="section" id="get-data-from-command-line">
 <h2>Get data from command line<a class="headerlink" href="#get-data-from-command-line" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sqlite3 database.sqlite3
-sqlite&gt; CREATE TABLE tbl1 <span class="o">(</span>id PRIMARY KEY NOT NULL, name DEFAULT <span class="s1">&#39;&#39;</span>, email NOT NULL, password NOT NULL<span class="o">)</span><span class="p">;</span>
-sqlite&gt; INSERT INTO tbl1 <span class="o">(</span>name, email, password<span class="o">)</span> VALUES <span class="o">(</span><span class="s1">&#39;Kentaro Wada&#39;</span>, <span class="s1">&#39;www.kentaro.wada@gmail.com&#39;</span>, <span class="s1">&#39;password&#39;</span><span class="o">)</span><span class="p">;</span>
-sqlite&gt; SELECT name FROM tbl1 WHERE <span class="nv">name</span> <span class="o">=</span> <span class="s1">&#39;Kentaro Wada&#39;</span> AND <span class="nv">email</span> <span class="o">=</span> <span class="s1">&#39;www.kentaro.wada@gmail.com&#39;</span><span class="p">;</span>
-sqlite&gt; UPDATE name SET <span class="nv">name</span> <span class="o">=</span> <span class="s1">&#39;wkentaro&#39;</span> WHERE <span class="nv">id</span> <span class="o">=</span> 1<span class="p">;</span>
+<p>sqlite3 interpreter from command line:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sqlite3 database.sqlite3
+sqlite&gt; CREATE TABLE tbl1 (id PRIMARY KEY NOT NULL, name DEFAULT &#39;&#39;, email NOT NULL, password NOT NULL);
+sqlite&gt; INSERT INTO tbl1 (name, email, password) VALUES (&#39;Kentaro Wada&#39;, &#39;www.kentaro.wada@gmail.com&#39;, &#39;password&#39;);
+sqlite&gt; SELECT name FROM tbl1 WHERE name = &#39;Kentaro Wada&#39; AND email = &#39;www.kentaro.wada@gmail.com&#39;;
+sqlite&gt; UPDATE name SET name = &#39;wkentaro&#39; WHERE id = 1;
 </pre></div>
 </div>
 </div>
 <div class="section" id="manage-sqlite3-with-python">
 <h2>Manage SQLite3 with Python<a class="headerlink" href="#manage-sqlite3-with-python" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># Connect database</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;database.sqlite3&#39;</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-<span class="c"># Get data from database</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">&#39;SELECT * FROM tbl1&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-
-<span class="c"># Store data to database</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sql</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;INSERT INTO tbl1 (name, email, password) VALUES (&#39;Kentaro Wada&#39;, &#39;www.kentaro.wada@gmail.com&#39;, &#39;password&#39;)&quot;&quot;&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-
-<span class="c"># Deconnect database</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<p>Connect database:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;database.sqlite3&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Get data from database:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sql</span> <span class="o">=</span> <span class="s">&#39;SELECT * FROM tbl1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Store data to database:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sql</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;INSERT INTO tbl1 (name, email, password) VALUES (&#39;Kentaro Wada&#39;, &#39;www.kentaro.wada@gmail.com&#39;, &#39;password&#39;)&quot;&quot;&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Deconnect database:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
