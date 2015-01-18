@@ -49,16 +49,16 @@
 <h1>Apache config for WSGI with Python<a class="headerlink" href="#apache-config-for-wsgi-with-python" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="hosting">
 <h2>Hosting<a class="headerlink" href="#hosting" title="Permalink to this headline">¶</a></h2>
-<p>Edit <code class="code docutils literal"><span class="pre">/etc/apache2/sites-available/jishupro.conf</span></code>.</p>
-<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
-  <span class="nb">ServerName</span> keyopener.ddo.jp
-  <span class="nb">WSGIScriptAlias</span> / <span class="sx">/home/pi/Work/jishupro/website/jishupro.wsgi</span>
-<span class="nt">&lt;/VirtualHost&gt;</span>
+<p>Edit <code class="code docutils literal"><span class="pre">/etc/apache2/sites-available/jishupro.conf</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;VirtualHost *:80&gt;
+  ServerName keyopener.ddo.jp
+  WSGIScriptAlias / /home/pi/Work/jishupro/website/jishupro.wsgi
+&lt;/VirtualHost&gt;
 </pre></div>
 </div>
-<p>Reflect the config with below.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo a2ensite jishupro.conf
-<span class="nv">$ </span>sudo apachectl restart
+<p>Reflect the config with below.:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ sudo a2ensite jishupro.conf
+$ sudo apachectl restart
 </pre></div>
 </div>
 </div>
