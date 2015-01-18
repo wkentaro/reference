@@ -9,5 +9,5 @@ Change Apache authority
    $ sudo visudo
 
 
-.. code-block :: sh
+.. code-block :: 
    www-data  ALL=(ALL) NOPASSWD: /usr/bin/python
