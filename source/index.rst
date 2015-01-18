@@ -19,7 +19,7 @@ Contents:
   usage_of_sklearn
   send_mail_from_cmdline_yosemite
   usage_of_sqlite3
-
+  sudo_from_web
 
 
 Indices and tables
