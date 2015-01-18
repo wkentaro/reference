@@ -4,9 +4,7 @@ Apache config for WSGI with Python
 Hosting
 +++++++
 
-Edit :code:`/etc/apache2/sites-available/jishupro.conf`.
-
-.. code-block :: apache
+Edit :code:`/etc/apache2/sites-available/jishupro.conf`::
 
   <VirtualHost *:80>
     ServerName keyopener.ddo.jp
@@ -14,9 +12,7 @@ Edit :code:`/etc/apache2/sites-available/jishupro.conf`.
   </VirtualHost>
 
 
-Reflect the config with below.
-
-.. code-block :: bash
+Reflect the config with below.::
 
   $ sudo a2ensite jishupro.conf
   $ sudo apachectl restart
