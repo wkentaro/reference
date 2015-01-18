@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Apache with sudo &mdash; reference 0.1 documentation</title>
+    <title>Apache config for WSGI with Python &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="reference 0.1 documentation" href="index.html" />
-    <link rel="next" title="Apache config for WSGI with Python" href="apache_config_for_wsgi_python.html" />
-    <link rel="prev" title="Usage of sqlite3 &amp; Python" href="usage_of_sqlite3.html" /> 
+    <link rel="prev" title="Apache with sudo" href="sudo_from_web.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -35,10 +34,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="apache_config_for_wsgi_python.html" title="Apache config for WSGI with Python"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="usage_of_sqlite3.html" title="Usage of sqlite3 &amp; Python"
+          <a href="sudo_from_web.html" title="Apache with sudo"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -49,16 +45,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="apache-with-sudo">
-<h1>Apache with sudo<a class="headerlink" href="#apache-with-sudo" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="change-apache-authority">
-<h2>Change Apache authority<a class="headerlink" href="#change-apache-authority" title="Permalink to this headline">¶</a></h2>
-<p>Add below by <code class="code docutils literal"><span class="pre">sudo</span> <span class="pre">visudo</span></code>.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># For raspberry pi</span>
-www-data  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/python
-
-<span class="c"># Ubuntu</span>
-apache  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/python
+  <div class="section" id="apache-config-for-wsgi-with-python">
+<h1>Apache config for WSGI with Python<a class="headerlink" href="#apache-config-for-wsgi-with-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hosting">
+<h2>Hosting<a class="headerlink" href="#hosting" title="Permalink to this headline">¶</a></h2>
+<p>Edit <code class="code docutils literal"><span class="pre">/etc/apache2/sites-available/jishupro.conf</span></code>.</p>
+<div class="highlight-apache"><div class="highlight"><pre><span class="nt">&lt;VirtualHost</span> <span class="s">*:80</span><span class="nt">&gt;</span>
+  <span class="nb">ServerName</span> keyopener.ddo.jp
+  <span class="nb">WSGIScriptAlias</span> / <span class="sx">/home/pi/Work/jishupro/website/jishupro.wsgi</span>
+<span class="nt">&lt;/VirtualHost&gt;</span>
+</pre></div>
+</div>
+<p>Reflect the config with below.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo a2ensite jishupro.conf
+<span class="nv">$ </span>sudo apachectl restart
 </pre></div>
 </div>
 </div>
@@ -72,22 +72,19 @@ apache  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Apache with sudo</a><ul>
-<li><a class="reference internal" href="#change-apache-authority">Change Apache authority</a></li>
+<li><a class="reference internal" href="#">Apache config for WSGI with Python</a><ul>
+<li><a class="reference internal" href="#hosting">Hosting</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="usage_of_sqlite3.html"
-                        title="previous chapter">Usage of sqlite3 &amp; Python</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="apache_config_for_wsgi_python.html"
-                        title="next chapter">Apache config for WSGI with Python</a></p>
+  <p class="topless"><a href="sudo_from_web.html"
+                        title="previous chapter">Apache with sudo</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sudo_from_web.txt"
+      <li><a href="_sources/apache_config_for_wsgi_python.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -115,10 +112,7 @@ apache  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="apache_config_for_wsgi_python.html" title="Apache config for WSGI with Python"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="usage_of_sqlite3.html" title="Usage of sqlite3 &amp; Python"
+          <a href="sudo_from_web.html" title="Apache with sudo"
              >previous</a> |</li>
         <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
