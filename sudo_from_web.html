@@ -53,12 +53,12 @@
 <h1>Apache with sudo<a class="headerlink" href="#apache-with-sudo" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="change-apache-authority">
 <h2>Change Apache authority<a class="headerlink" href="#change-apache-authority" title="Permalink to this headline">¶</a></h2>
-<p>Add below by <code class="code docutils literal"><span class="pre">sudo</span> <span class="pre">visudo</span></code>.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="c"># For raspberry pi</span>
-www-data  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/python
+<p>Add below by <code class="code docutils literal"><span class="pre">sudo</span> <span class="pre">visudo</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre># For raspberry pi
+www-data  ALL=(ALL) NOPASSWD: /usr/bin/python
 
-<span class="c"># Ubuntu</span>
-apache  <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span> NOPASSWD: /usr/bin/python
+# Ubuntu
+apache  ALL=(ALL) NOPASSWD: /usr/bin/python
 </pre></div>
 </div>
 </div>
