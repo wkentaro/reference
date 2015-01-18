@@ -1,0 +1,13 @@
+Apache with sudo
+================
+
+Change Apache authority
++++++++++++++++++++++++
+
+.. code-block :: bash
+
+   $ sudo visudo
+
+
+.. code-block :: sh
+   www-data  ALL=(ALL) NOPASSWD: /usr/bin/python
