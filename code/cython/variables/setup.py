@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# hello_setup.py
-# author: Kentaro Wada <www.kentaro.wada@gmail.com>
-
+#
 from distutils.core import setup
 from Cython.Build import cythonize
+
+
+__author__ = "www.kentaro.wada@gmail.com <Kentaro Wada>"
+
 
 setup(
     name='Variables app',
