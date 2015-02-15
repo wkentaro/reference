@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Apache config for WSGI with Python &mdash; reference 0.1 documentation</title>
+    <title>What I do when clean Raspbian installation on Raspberry Pi. &mdash; reference 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,8 +24,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="reference 0.1 documentation" href="index.html" />
-    <link rel="next" title="What I do when clean Raspbian installation on Raspberry Pi." href="raspi_todo_first.html" />
-    <link rel="prev" title="Apache with sudo" href="sudo_from_web.html" /> 
+    <link rel="prev" title="Apache config for WSGI with Python" href="apache_config_for_wsgi_python.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -35,10 +34,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="raspi_todo_first.html" title="What I do when clean Raspbian installation on Raspberry Pi."
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="sudo_from_web.html" title="Apache with sudo"
+          <a href="apache_config_for_wsgi_python.html" title="Apache config for WSGI with Python"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -49,22 +45,31 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="apache-config-for-wsgi-with-python">
-<h1>Apache config for WSGI with Python<a class="headerlink" href="#apache-config-for-wsgi-with-python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="hosting">
-<h2>Hosting<a class="headerlink" href="#hosting" title="Permalink to this headline">¶</a></h2>
-<p>Edit <code class="code docutils literal"><span class="pre">/etc/apache2/sites-available/jishupro.conf</span></code>:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;VirtualHost *:80&gt;
-  ServerName keyopener.ddo.jp
-  WSGIScriptAlias / /home/pi/Work/jishupro/website/jishupro.wsgi
-&lt;/VirtualHost&gt;
+  <div class="section" id="what-i-do-when-clean-raspbian-installation-on-raspberry-pi">
+<h1>What I do when clean Raspbian installation on Raspberry Pi.<a class="headerlink" href="#what-i-do-when-clean-raspbian-installation-on-raspberry-pi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-config">
+<h2>Basic config<a class="headerlink" href="#basic-config" title="Permalink to this headline">¶</a></h2>
+<p>With <code class="code docutils literal"><span class="pre">sudo</span> <span class="pre">raspi-config</span></code>, change belows.</p>
+<ol class="arabic simple">
+<li>Expand Filesystem (expand filesystem size for ex. 3GB -&gt; 30GB)</li>
+<li>User Password (change password to login rapi and to be root)</li>
+<li>Hostname (change hostname to find raspi ip in local network)</li>
+<li>International Settings<ul>
+<li>Change Locale</li>
+<li>Change Timezone</li>
+</ul>
+</li>
+</ol>
+<p>and install avahi-daemon for static hostname. ( for 3. )</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo apt-get install avahi-daemon
 </pre></div>
 </div>
-<p>Reflect the config with below.:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ sudo a2ensite jishupro.conf
-$ sudo apachectl restart
-</pre></div>
 </div>
+<div class="section" id="airplay-config">
+<h2>Airplay config<a class="headerlink" href="#airplay-config" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://www.raywenderlich.com/44918/raspberry-pi-airplay-tutorial">http://www.raywenderlich.com/44918/raspberry-pi-airplay-tutorial</a></li>
+</ul>
 </div>
 </div>
 
@@ -76,22 +81,20 @@ $ sudo apachectl restart
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Apache config for WSGI with Python</a><ul>
-<li><a class="reference internal" href="#hosting">Hosting</a></li>
+<li><a class="reference internal" href="#">What I do when clean Raspbian installation on Raspberry Pi.</a><ul>
+<li><a class="reference internal" href="#basic-config">Basic config</a></li>
+<li><a class="reference internal" href="#airplay-config">Airplay config</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="sudo_from_web.html"
-                        title="previous chapter">Apache with sudo</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="raspi_todo_first.html"
-                        title="next chapter">What I do when clean Raspbian installation on Raspberry Pi.</a></p>
+  <p class="topless"><a href="apache_config_for_wsgi_python.html"
+                        title="previous chapter">Apache config for WSGI with Python</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/apache_config_for_wsgi_python.txt"
+      <li><a href="_sources/raspi_todo_first.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -119,10 +122,7 @@ $ sudo apachectl restart
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="raspi_todo_first.html" title="What I do when clean Raspbian installation on Raspberry Pi."
-             >next</a> |</li>
-        <li class="right" >
-          <a href="sudo_from_web.html" title="Apache with sudo"
+          <a href="apache_config_for_wsgi_python.html" title="Apache config for WSGI with Python"
              >previous</a> |</li>
         <li><a href="index.html">reference 0.1 documentation</a> &raquo;</li> 
       </ul>
